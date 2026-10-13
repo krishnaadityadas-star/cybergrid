@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberGrid // Flexbox Alignment Game - Live Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="game-header">
+    <div class="header-left">
+      <a href="../../index.html" class="back-link">← Return to Portfolio</a>
+      <span class="game-title">CYBERGRID // FLEXBOX ARENA</span>
+    </div>
+    <div class="header-right">
+      <span class="badge">BUILDERS DAY DEMO</span>
+      <span class="status-indicator">● SYSTEM ONLINE</span>
+    </div>
+  </header>
+
+  <main class="game-container">
+    
+    <!-- Mission Briefing -->
+    <section class="briefing-panel">
+      <h1>Level 01: Align the Cyber-Drones</h1>
+      <p>
+        Use the pure CSS control console below to adjust <code>justify-content</code> and <code>align-items</code> on the flex container. Guide all three cyber-drones into their designated target coordinates!
+      </p>
+    </section>
+
+    <!-- CSS Control Form (Pure CSS Interactive Radio Controls) -->
+    <form class="controls-form">
+      
+      <!-- Justify Content Controls -->
+      <div class="control-card">
+        <h3>1. Select <code>justify-content</code> (Main Axis):</h3>
+        <div class="radio-options">
+          <label class="radio-btn">
+            <input type="radio" name="justify" id="jc-start" checked>
+            <span>flex-start</span>
+          </label>
+          <label class="radio-btn">
+            <input type="radio" name="justify" id="jc-center">
+            <span>center</span>
+          </label>
+          <label class="radio-btn">
+            <input type="radio" name="justify" id="jc-between">
+            <span>space-between</span>
+          </label>
+          <label class="radio-btn">
+            <input type="radio" name="justify" id="jc-around">
+            <span>space-around</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Align Items Controls -->
+      <div class="control-card">
+        <h3>2. Select <code>align-items</code> (Cross Axis):</h3>
+        <div class="radio-options">
+          <label class="radio-btn">
+            <input type="radio" name="align" id="ai-start" checked>
+            <span>flex-start</span>
+          </label>
+          <label class="radio-btn">
+            <input type="radio" name="align" id="ai-center">
+            <span>center</span>
+          </label>
+          <label class="radio-btn">
+            <input type="radio" name="align" id="ai-end">
+            <span>flex-end</span>
+          </label>
+        </div>
+      </div>
+
+    </form>
+
+    <!-- Live Game Arena -->
+    <section class="arena-wrapper">
+      <div class="arena-header">
+        <span class="arena-label">ARENA GRID: #flex-container</span>
+        <span class="target-hint">🎯 Target Zone: Center &amp; Space-Between</span>
+      </div>
+
+      <!-- The Real Flex Container that moves based on CSS :has() -->
+      <div class="flex-arena">
+        
+        <!-- Target Markers in Background -->
+        <div class="target-ghost target-1"><span>TARGET A</span></div>
+        <div class="target-ghost target-2"><span>TARGET B</span></div>
+        <div class="target-ghost target-3"><span>TARGET C</span></div>
+
+        <!-- Real Flex Items (Cyber-Drones) -->
+        <div class="drone drone-1">
+          <div class="drone-icon">🤖</div>
+          <span class="drone-id">DRONE-01</span>
+          <span class="drone-coord">[X:1]</span>
+        </div>
+
+        <div class="drone drone-2">
+          <div class="drone-icon">👾</div>
+          <span class="drone-id">DRONE-02</span>
+          <span class="drone-coord">[X:2]</span>
+        </div>
+
+        <div class="drone drone-3">
+          <div class="drone-icon">🚀</div>
+          <span class="drone-id">DRONE-03</span>
+          <span class="drone-coord">[X:3]</span>
+        </div>
+
+      </div>
+
+      <!-- Dynamic Code Inspector HUD -->
+      <div class="code-inspector">
+        <span class="inspector-title">Active CSS Properties Applied:</span>
+        <div class="code-snippet">
+          <pre><code>.flex-arena {
+  display: flex;
+  flex-direction: row;
+  /* Adjusting via your controls above in pure CSS! */
+}</code></pre>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
